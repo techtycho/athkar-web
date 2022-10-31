@@ -1,5 +1,7 @@
 export const translation = {
   athkarNavItem: "الأذكار",
   hadithNavItem: "حديث",
-  aboutNavItem: "من نحن",
+  aboutNavItem: "عن البرنامج",
 };
+
+export const rawName = "arabic";

@@ -1,12 +1,13 @@
 import { imageList, changeBackground } from "./background/switcher";
-import { languages, changeLanguage } from "./translation/switcher";
+import { nextLanguage, activateLanguage } from "./translation/switcher";
 
 import "./styles/main.scss";
 
-changeLanguage(languages.english);
-
 const button = document.getElementById("btn");
 const main = document.getElementById("main");
+const settingsIcon = document.getElementById("settings-icon");
+
+activateLanguage();
 
 let i = 0;
 setInterval(() => {
@@ -17,4 +18,8 @@ setInterval(() => {
 
 button.addEventListener("click", () => {
   window.open("/about", "_self");
+});
+
+settingsIcon.addEventListener("click", () => {
+  nextLanguage();
 });

@@ -1,8 +1,10 @@
 @import "config";
-@import "navbar";
-@import "index";
 
-@import "modules/button";
+@import "modules/navbar";
+@import "modules/index";
+
+@import "utils/flexbox";
+@import "utils/button";
 
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap");
 

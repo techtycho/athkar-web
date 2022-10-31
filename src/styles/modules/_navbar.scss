@@ -11,9 +11,21 @@
   box-shadow: 0 0 20px 0 #000a;
 
   .nav-items {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 50px;
+
+    .fa-solid {
+      color: #fff;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $text-hover-dark;
+      }
+    }
 
     .logo {
       font-size: 2.5rem;

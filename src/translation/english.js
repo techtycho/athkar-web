@@ -3,3 +3,5 @@ export const translation = {
   hadithNavItem: "Hadith",
   aboutNavItem: "About",
 };
+
+export const rawName = "english";
