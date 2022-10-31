@@ -1,0 +1,45 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000bf;
+  backdrop-filter: blur(10px);
+  padding: 30px 50px;
+  height: 100%;
+  width: fit-content;
+
+  .separator {
+    flex: 1;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+.title {
+  text-align: center;
+  color: $text-hover-dark;
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  p {
+    margin-top: -10px;
+  }
+}
+
+.subtitle {
+  margin-top: 30px;
+  text-align: center;
+  color: $text-hover-dark;
+  font-size: 1.5rem;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

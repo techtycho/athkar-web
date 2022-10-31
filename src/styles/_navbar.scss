@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 9vh;
+  background-color: $accent;
+  background-image: linear-gradient(to right, transparent, $accent),
+    url("/assets/islamic-pattern.png");
+  background-size: contain;
+  position: relative;
+  box-shadow: 0 0 20px 0 #000a;
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 1;
+      margin-top: -12px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          color: $text-hover-dark !important;
+        }
+
+        &:visited {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline: none;
+          color: $text-hover-dark !important;
+        }
+      }
+    }
+
+    .nav-item {
+      list-style: none;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+          cursor: pointer;
+          color: $text-hover-dark !important;
+        }
+
+        &:visited {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline: none;
+          color: $text-hover-dark !important;
+        }
+      }
+    }
+  }
+}

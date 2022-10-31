@@ -1,0 +1,29 @@
+{
+  "name": "advice-app",
+  "version": "1.0.0",
+  "description": "Advice Application",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "live-server": "live-server . --port=5500",
+    "sass": "sass src/styles/main.scss dist/css/main.css --no-source-map -s compressed"
+  },
+  "keywords": [
+    "advice",
+    "app"
+  ],
+  "author": "Omar Ahmed",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
