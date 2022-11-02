@@ -1,31 +1,24 @@
-import { imageList, changeBackground } from "./background/switcher";
-import { nextLanguage, activateLanguage } from "./translation/switcher";
+import { loopBackground } from "./background/loop";
+import { activateLanguage } from "./translation/switcher";
 import { createModal } from "./ui/modal/modal";
+
+import { queryId } from "./dom/selector";
+import { openURL } from "./dom/url";
+import { onClick } from "./dom/event";
 
 import "./styles/main.scss";
 
-const button = document.getElementById("btn");
-const main = document.getElementById("main");
-const settingsIcon = document.getElementById("settings-icon");
+const button = queryId("btn");
+const main = queryId("main");
+const settingsIcon = queryId("settings-icon");
+
+activateLanguage();
+loopBackground(main, 5000);
 
 createModal("/src/settingsTemplate.html").then((modal) => {
-  let open = false;
-  settingsIcon.addEventListener("click", () => {
-    if (!open) modal.show();
-    else modal.hide();
-    open = !open;
+  onClick(settingsIcon, () => {
+    modal.trigger();
   });
 });
 
-activateLanguage();
-
-let i = 0;
-setInterval(() => {
-  changeBackground(main, imageList[i]);
-  if (i === imageList.length - 1) i = 0;
-  else i++;
-}, 5000);
-
-button.addEventListener("click", () => {
-  window.open("/about", "_self");
-});
+onClick(button, () => openURL("/about"));

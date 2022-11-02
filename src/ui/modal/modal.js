@@ -1,8 +1,10 @@
 import { getTemplate } from "../../file/template";
+import { popOut, popOutReverse } from "./animations";
 import "./component";
 
 class Modal {
   element;
+  triggerVar = false;
 
   setElement(element) {
     this.element = element;
@@ -10,51 +12,29 @@ class Modal {
 
   show() {
     document.body.appendChild(this.element);
-    this.element.animate(
-      [
-        {
-          transform: "scale(0)",
-          easing: "ease",
-        },
-        {
-          transform: "scale(1)",
-          easing: "ease",
-        },
-      ],
-      200
-    );
-    setTimeout(() => {
-      this.element.style.transform = "scale(1)";
-    }, 150);
+    popOut(this.element, 200);
   }
 
   hide() {
-    this.element.animate(
-      [
-        {
-          transform: "scale(1)",
-          easing: "ease",
-        },
-        {
-          transform: "scale(0)",
-          easing: "ease",
-        },
-      ],
-      200
-    );
-    setTimeout(() => {
-      this.element.style.transform = "scale(0)";
-      this.element.remove();
-    }, 150);
+    popOutReverse(this.element, 200, (e) => {
+      e.remove();
+    });
+  }
+
+  trigger() {
+    if (!this.triggerVar) this.show();
+    else this.hide();
+    this.triggerVar = !this.triggerVar;
   }
 }
 
 export async function createModal(templatePath) {
   const modal = document.createElement("div", { is: "modal-ui" });
   const modalClass = new Modal();
-
   const template = await getTemplate(templatePath);
+
   modal.innerHTML = template;
   modalClass.setElement(modal);
+
   return modalClass;
 }

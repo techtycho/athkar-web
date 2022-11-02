@@ -6,7 +6,7 @@
   padding-bottom: 15px;
   margin-top: 90px;
   font-size: 1.2rem;
-  background-color: darken(#471e15, 10);
+  background-color: darken($dark-background, 10);
   border-radius: 10px;
   font-family: "Aref Ruqaa", serif;
   box-shadow: 0 0 20px 5px #0005;
@@ -15,7 +15,7 @@
   &:hover {
     cursor: pointer;
     box-shadow: 0 0 30px 10px #0005;
-    background-color: darken(#471e15, 15);
+    background-color: darken($dark-background, 15);
   }
 
   &:focus {
