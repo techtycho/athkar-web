@@ -1,11 +1,21 @@
 import { imageList, changeBackground } from "./background/switcher";
 import { nextLanguage, activateLanguage } from "./translation/switcher";
+import { createModal } from "./ui/modal/modal";
 
 import "./styles/main.scss";
 
 const button = document.getElementById("btn");
 const main = document.getElementById("main");
 const settingsIcon = document.getElementById("settings-icon");
+
+createModal("/src/settingsTemplate.html").then((modal) => {
+  let open = false;
+  settingsIcon.addEventListener("click", () => {
+    if (!open) modal.show();
+    else modal.hide();
+    open = !open;
+  });
+});
 
 activateLanguage();
 
@@ -18,8 +28,4 @@ setInterval(() => {
 
 button.addEventListener("click", () => {
   window.open("/about", "_self");
-});
-
-settingsIcon.addEventListener("click", () => {
-  nextLanguage();
 });
