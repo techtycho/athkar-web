@@ -1,7 +1,9 @@
 class ModalUI extends HTMLDivElement {
+  static defaultClass = "modal";
+
   constructor() {
     super();
-    this.className = "modal";
+    this.className = ModalUI.defaultClass;
   }
 }
 

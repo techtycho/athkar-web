@@ -1,0 +1,42 @@
+$border-radius: 10px;
+
+.switcher {
+  display: flex;
+
+  :first-child {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  :last-child {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    border-right: 2px solid darken($accent, 8);
+  }
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: $accent;
+    color: #fff;
+    border: 2px solid darken($accent, 8);
+    border-right: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: lighten($accent, 5);
+    }
+
+    &.selected {
+      background-color: lighten($accent, 10);
+
+      &:hover {
+        background-color: lighten($accent, 12);
+      }
+    }
+  }
+}

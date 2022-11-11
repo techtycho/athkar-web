@@ -1,4 +1,5 @@
 import { translatableList } from "./translatable";
+import { alignableList } from "./align";
 import {
   getStorage,
   processStorage,
@@ -9,31 +10,44 @@ import * as english from "./english";
 import * as arabic from "./arabic";
 
 export const languages = {
-  arabic,
   english,
+  arabic,
 };
 
-const languageList = [arabic, english];
+const languageList = [english, arabic];
 
 const languagesRaw = {
-  arabic: "arabic",
   english: "english",
+  arabic: "arabic",
 };
 
 export function activateLanguage() {
-  const defaultLanguage = processStorage(
-    "default_language",
-    languagesRaw.english
-  );
+  const defaultLanguage = getCurrentLanguage();
   changeLanguage(languages[defaultLanguage]);
+}
+
+export function getCurrentLanguage() {
+  return processStorage("default_language", languagesRaw.english);
+}
+
+export function getCurrentLanguageIndex() {
+  const current = processStorage("default_language", languagesRaw.english);
+  return languageList.indexOf(languages[current]);
 }
 
 export function changeLanguage(language) {
   translatableList.forEach((translatable) => {
     const element = document.querySelector(translatable);
-    element.textContent = language.translation[element.dataset.translate];
-    saveStorage("default_language", languagesRaw[language.rawName]);
+    if (element)
+      element.textContent = language.translation[element.dataset.translate];
   });
+
+  alignableList.forEach((alignable) => {
+    const element = document.querySelector(alignable);
+    if (element) element.style.textAlign = language.alignment;
+  });
+
+  saveStorage("default_language", languagesRaw[language.rawName]);
 }
 
 export function nextLanguage() {

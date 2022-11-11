@@ -1,10 +1,15 @@
 import { loopBackground } from "./background/loop";
-import { activateLanguage } from "./translation/switcher";
-import { createModal } from "./ui/modal/modal";
+import {
+  activateLanguage,
+  changeLanguage,
+  languages,
+  getCurrentLanguageIndex,
+} from "./translation/switcher";
+import { queryId, onClick, openURL } from "./dom/dom";
 
-import { queryId } from "./dom/selector";
-import { openURL } from "./dom/url";
-import { onClick } from "./dom/event";
+import { Switcher } from "./ui/switcher/switcher";
+import { createModal } from "./ui/modal/modal";
+import "./ui/switcher/component";
 
 import "./styles/main.scss";
 
@@ -17,7 +22,21 @@ loopBackground(main, 5000);
 
 createModal("/src/settingsTemplate.html").then((modal) => {
   onClick(settingsIcon, () => {
-    modal.trigger();
+    modal.toggle();
+
+    activateLanguage();
+
+    const langSwitcherElement = queryId("lang-switcher");
+    const langSwitcher = new Switcher(langSwitcherElement);
+    langSwitcher.setOption(getCurrentLanguageIndex());
+
+    langSwitcher.addAction("lang-english", () =>
+      changeLanguage(languages.english)
+    );
+
+    langSwitcher.addAction("lang-arabic", () =>
+      changeLanguage(languages.arabic)
+    );
   });
 });
 

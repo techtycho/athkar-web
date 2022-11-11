@@ -4,7 +4,7 @@ import "./component";
 
 class Modal {
   element;
-  triggerVar = false;
+  toggleVar = false;
 
   setElement(element) {
     this.element = element;
@@ -21,10 +21,10 @@ class Modal {
     });
   }
 
-  trigger() {
-    if (!this.triggerVar) this.show();
+  toggle() {
+    if (!this.toggleVar) this.show();
     else this.hide();
-    this.triggerVar = !this.triggerVar;
+    this.toggleVar = !this.toggleVar;
   }
 }
 

@@ -16,6 +16,9 @@
   "author": "Omar Ahmed",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "babel-loader": "^9.0.1",
     "css-loader": "^6.7.1",
     "live-server": "^1.2.2",
     "mini-css-extract-plugin": "^2.6.1",
