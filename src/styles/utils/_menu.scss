@@ -1,0 +1,88 @@
+.menu {
+  background-color: #000000cf;
+  color: #fff;
+  position: fixed;
+  width: 65%;
+  height: 91%;
+  z-index: 1;
+  top: 9%;
+  overflow: hidden;
+
+  .menu-header {
+    font-size: 5rem;
+    text-align: center;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $text-hover-dark !important;
+      }
+
+      &:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: none;
+        color: $text-hover-dark !important;
+      }
+    }
+  }
+
+  .menu-content {
+    margin-top: 10px;
+
+    .nav-items {
+      li:last-child {
+        border-bottom: 1px solid #333;
+      }
+
+      li {
+        list-style-type: none;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #333;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+
+        &:hover {
+          background-color: #2222227f;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.2s;
+          cursor: pointer;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+
+          &:hover {
+            color: $text-hover-dark !important;
+          }
+
+          &:visited {
+            color: #fff;
+            text-decoration: none;
+          }
+
+          &:focus {
+            outline: none;
+            color: $text-hover-dark !important;
+          }
+        }
+
+        &.selected {
+          background-color: #722a16af;
+        }
+      }
+    }
+  }
+}

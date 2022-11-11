@@ -7,6 +7,9 @@ export const translatable = {
   modalLang: "[data-translate=modalLang]",
   modalLangEnglish: "[data-translate=modalLangEnglish]",
   modalLangArabic: "[data-translate=modalLangArabic]",
+  menuAthkar: "[data-translate=menuAthkar]",
+  menuHadith: "[data-translate=menuHadith]",
+  menuAbout: "[data-translate=menuAbout]",
 };
 
 export const translatableList = [
@@ -18,4 +21,7 @@ export const translatableList = [
   translatable.modalLang,
   translatable.modalLangEnglish,
   translatable.modalLangArabic,
+  translatable.menuAthkar,
+  translatable.menuHadith,
+  translatable.menuAbout,
 ];

@@ -37,3 +37,39 @@ export function popOutReverse(element, duration, afterFun = () => {}) {
     afterFun(element);
   }, duration - 50);
 }
+
+export function slide(element, duration, afterFun = () => {}) {
+  element.animate(
+    [
+      {
+        right: "-70%",
+      },
+      {
+        right: "0",
+      },
+    ],
+    duration
+  );
+  setTimeout(() => {
+    element.style.right = "0";
+    afterFun(element);
+  }, duration - 50);
+}
+
+export function slideReverse(element, duration, afterFun = () => {}) {
+  element.animate(
+    [
+      {
+        right: "0",
+      },
+      {
+        right: "-70%",
+      },
+    ],
+    duration
+  );
+  setTimeout(() => {
+    element.style.right = "-70%";
+    afterFun(element);
+  }, duration - 50);
+}

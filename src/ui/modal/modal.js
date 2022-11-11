@@ -7,9 +7,22 @@ class Modal {
   toggleVar = false;
   darkElement;
   darkFactor;
+  className = "modal";
+  animation = [popOut, popOutReverse];
+  animationDuration = 200;
 
   setElement(element) {
     this.element = element;
+  }
+
+  setAnimation(animations, duration) {
+    this.animation = animations;
+    this.animationDuration = duration;
+  }
+
+  setClass(name) {
+    this.element.className = name;
+    this.className = name;
   }
 
   setDarkElement(element) {
@@ -23,12 +36,12 @@ class Modal {
   show() {
     document.body.appendChild(this.element);
     this.darkElement.style.filter = `brightness(${this.darkFactor})`;
-    popOut(this.element, 200);
+    this.animation[0](this.element, this.animationDuration);
   }
 
   hide() {
     main.style.filter = "brightness(1)";
-    popOutReverse(this.element, 200, (e) => {
+    this.animation[1](this.element, this.animationDuration, (e) => {
       e.remove();
     });
   }

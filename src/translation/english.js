@@ -7,6 +7,9 @@ export const translation = {
   modalLang: "Language",
   modalLangEnglish: "English",
   modalLangArabic: "Arabic",
+  menuAthkar: "Athkar",
+  menuHadith: "Hadith",
+  menuAbout: "About",
 };
 
 export const alignment = "left";
