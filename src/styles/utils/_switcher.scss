@@ -26,6 +26,7 @@ $border-radius: 10px;
     border: 2px solid darken($accent, 8);
     border-right: none;
     cursor: pointer;
+    transition: background-color 0.15s;
 
     &:hover {
       background-color: lighten($accent, 5);

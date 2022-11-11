@@ -23,11 +23,9 @@ loopBackground(main, 5000);
 createModal("/src/settingsTemplate.html").then((modal) => {
   onClick(settingsIcon, () => {
     modal.toggle();
-
     activateLanguage();
 
-    const langSwitcherElement = queryId("lang-switcher");
-    const langSwitcher = new Switcher(langSwitcherElement);
+    const langSwitcher = new Switcher(queryId("lang-switcher"));
     langSwitcher.setOption(getCurrentLanguageIndex());
 
     langSwitcher.addAction("lang-english", () =>
@@ -37,6 +35,11 @@ createModal("/src/settingsTemplate.html").then((modal) => {
     langSwitcher.addAction("lang-arabic", () =>
       changeLanguage(languages.arabic)
     );
+
+    onClick(main, () => {
+      modal.hide();
+      modal.toggleVar = false;
+    });
   });
 });
 

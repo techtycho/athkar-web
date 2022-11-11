@@ -2,6 +2,8 @@ import { getTemplate } from "../../file/template";
 import { popOut, popOutReverse } from "./animations";
 import "./component";
 
+const main = document.getElementById("main");
+
 class Modal {
   element;
   toggleVar = false;
@@ -12,10 +14,12 @@ class Modal {
 
   show() {
     document.body.appendChild(this.element);
+    main.style.filter = "brightness(0.6)";
     popOut(this.element, 200);
   }
 
   hide() {
+    main.style.filter = "brightness(1)";
     popOutReverse(this.element, 200, (e) => {
       e.remove();
     });
