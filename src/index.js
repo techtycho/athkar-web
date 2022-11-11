@@ -21,6 +21,9 @@ activateLanguage();
 loopBackground(main, 5000);
 
 createModal("/src/settingsTemplate.html").then((modal) => {
+  modal.setDarkFactor(0.6);
+  modal.setDarkElement(main);
+
   onClick(settingsIcon, () => {
     modal.toggle();
     activateLanguage();

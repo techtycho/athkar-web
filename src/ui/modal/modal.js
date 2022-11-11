@@ -2,19 +2,27 @@ import { getTemplate } from "../../file/template";
 import { popOut, popOutReverse } from "./animations";
 import "./component";
 
-const main = document.getElementById("main");
-
 class Modal {
   element;
   toggleVar = false;
+  darkElement;
+  darkFactor;
 
   setElement(element) {
     this.element = element;
   }
 
+  setDarkElement(element) {
+    this.darkElement = element;
+  }
+
+  setDarkFactor(n) {
+    this.darkFactor = n;
+  }
+
   show() {
     document.body.appendChild(this.element);
-    main.style.filter = "brightness(0.6)";
+    this.darkElement.style.filter = `brightness(${this.darkFactor})`;
     popOut(this.element, 200);
   }
 
