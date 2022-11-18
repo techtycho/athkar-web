@@ -1,23 +1,20 @@
-import { getTemplate } from "../../file/template";
-import { popOut, popOutReverse } from "./animations";
-import "./component";
-
 class Modal {
   element;
   toggleVar = false;
-  darkElement;
+  darkElement = [];
   darkFactor;
   className = "modal";
-  animation = [popOut, popOutReverse];
-  animationDuration = 200;
+
+  showOperation = () => {
+    this.element.style.display = "block";
+  };
+
+  hideOperation = () => {
+    this.element.style.display = "none";
+  };
 
   setElement(element) {
     this.element = element;
-  }
-
-  setAnimation(animations, duration) {
-    this.animation = animations;
-    this.animationDuration = duration;
   }
 
   setClass(name) {
@@ -25,25 +22,44 @@ class Modal {
     this.className = name;
   }
 
-  setDarkElement(element) {
-    this.darkElement = element;
+  setDarkElement(elements) {
+    this.darkElement = elements;
   }
 
   setDarkFactor(n) {
     this.darkFactor = n;
   }
 
-  show() {
+  addToDOM(show = false) {
     document.body.appendChild(this.element);
-    this.darkElement.style.filter = `brightness(${this.darkFactor})`;
-    this.animation[0](this.element, this.animationDuration);
+    if (show) this.show();
+    else this.hide();
+  }
+
+  removeFromDOM() {
+    this.element.remove();
+  }
+
+  show() {
+    this.darkElement.forEach((el) => {
+      el.style.filter = `brightness(${this.darkFactor})`;
+    });
+    this.showOperation(this.element);
   }
 
   hide() {
-    main.style.filter = "brightness(1)";
-    this.animation[1](this.element, this.animationDuration, (e) => {
-      e.remove();
+    this.darkElement.forEach((el) => {
+      el.style.filter = "brightness(1)";
     });
+    this.hideOperation(this.element);
+  }
+
+  setShowOperation(func) {
+    this.showOperation = func;
+  }
+
+  setHideOperation(func) {
+    this.hideOperation = func;
   }
 
   toggle() {
@@ -53,13 +69,8 @@ class Modal {
   }
 }
 
-export async function createModal(templatePath) {
-  const modal = document.createElement("div", { is: "modal-ui" });
+export async function createModal(modal, func) {
   const modalClass = new Modal();
-  const template = await getTemplate(templatePath);
-
-  modal.innerHTML = template;
   modalClass.setElement(modal);
-
-  return modalClass;
+  func(modalClass);
 }

@@ -1,0 +1,24 @@
+.settings {
+  top: -91%;
+  transition: transform 0.15s, top 0.15s;
+
+  .close {
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: color 0.15s;
+
+    &:hover {
+      color: $text-hover-dark;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+  }
+}

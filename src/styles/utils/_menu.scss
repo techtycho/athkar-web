@@ -4,9 +4,11 @@
   position: fixed;
   width: 65%;
   height: 91%;
-  z-index: 1;
+  z-index: 3;
   top: 9%;
+  right: 0;
   overflow: hidden;
+  transition: right 0.15s;
 
   .menu-header {
     font-size: 5rem;
@@ -15,7 +17,6 @@
     a {
       color: #fff;
       text-decoration: none;
-      transition: color 0.2s;
 
       &:hover {
         cursor: pointer;
