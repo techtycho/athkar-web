@@ -1,3 +1,14 @@
+@media (max-width: 1150px) {
+  .about .wrapper {
+    grid-template-columns: 1fr;
+
+    div {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   main .panel {
     width: 100%;
@@ -19,6 +30,46 @@
 @media (max-width: 600px) {
   main .panel .btn {
     width: 100%;
+  }
+
+  .about {
+    padding: 20px;
+
+    .title {
+      h1 {
+        font-size: 2.5rem !important;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    .subtitle {
+      display: none;
+    }
+
+    .copy {
+      font-size: 0.8rem;
+    }
+
+    .wrapper {
+      div {
+        padding: 10px;
+        padding-bottom: 20px;
+
+        h2 {
+          font-size: 1rem;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+
+      margin: 20px 50px;
+    }
   }
 
   .menu {

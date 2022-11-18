@@ -68,6 +68,10 @@
         text-decoration: none;
         transition: color 0.2s;
 
+        &.current {
+          color: $text-hover-dark !important;
+        }
+
         &:hover {
           cursor: pointer;
           color: $text-hover-dark !important;

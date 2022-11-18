@@ -18,6 +18,7 @@
     a {
       color: #fff;
       text-decoration: none;
+      transition: color 0.2s;
 
       &:hover {
         cursor: pointer;
@@ -52,6 +53,14 @@
         border-right: none;
         border-left: none;
         border-bottom: none;
+
+        &.current {
+          background-color: #1c1c1c6f;
+
+          a {
+            color: $text-hover-dark !important;
+          }
+        }
 
         &:hover {
           background-color: #2222227f;

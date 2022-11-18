@@ -4,11 +4,115 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advice App | About</title>
-    <script defer src="/src/about.js"></script>
+    <title>AthkarWeb - قراءة الأذكار</title>
+    <script
+      src="https://kit.fontawesome.com/1e938fdd74.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="/dist/about.js"></script>
+    <link rel="stylesheet" href="/dist/index.css" />
   </head>
   <body>
-    <h1>About</h1>
-    <a href="/">Back</a>
+    <nav class="navbar">
+      <ul class="nav-items">
+        <div class="logo">
+          <a href="/">أذكار</a>
+        </div>
+        <li class="nav-item nav-item-lg">
+          <a href="/athkar" data-translate="athkarNavItem">Athkar</a>
+        </li>
+        <li class="nav-item nav-item-lg">
+          <a href="/hadith" data-translate="hadithNavItem">Hadith</a>
+        </li>
+        <li class="nav-item nav-item-lg">
+          <a href="/about" data-translate="aboutNavItem" class="current">
+            About
+          </a>
+        </li>
+        <div class="spacer"></div>
+        <li class="nav-item">
+          <i class="fa-solid fa-gear" id="settings-icon"></i>
+          <i class="fa-solid fa-bars" id="bars-icon"></i>
+        </li>
+      </ul>
+    </nav>
+    <main id="main">
+      <div class="panel about">
+        <div class="title">
+          <h1>أذكار ويب</h1>
+          <p>- Athkar Web -</p>
+        </div>
+        <p class="subtitle">من أذكار الكتاب و السنة</p>
+        <div class="wrapper">
+          <div class="info">
+            <h2>General Information</h2>
+            <p>
+              This project is a Sadaqa Jariya, developed and maintained by Omar
+              Ahmed (techtycho).
+            </p>
+          </div>
+          <div class="technical">
+            <h2>Technical Information</h2>
+            <p>AthkarWeb uses Hisn-al-Muslim's API for the Athkar.</p>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.hisn.almuslim&hl=en_US&gl=US"
+              target="_blank"
+            >
+              <img
+                src="/assets/hisnmuslim.webp"
+                width="50"
+                alt="Hisn-al-Muslim"
+              />
+            </a>
+            <a href="http://hisnmuslim.com/api/husn.json" target="_blank">
+              <img
+                src="https://imgs.search.brave.com/akC8x5YVbK7Dn6oWAnCNLv7Wa1y6DTcloud5yYSTNNI/rs:fit:832:810:1/g:ce/aHR0cHM6Ly9jcnlw/dG9xdWFsaXR5c2ln/bmFscy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMTAv/YXBpLnBuZw"
+                width="52"
+                alt="Hisn-al-Muslim's API"
+              />
+            </a>
+          </div>
+        </div>
+        <p class="copy">Copyright &copy; 2022, AthkarWeb Inc.</p>
+      </div>
+    </main>
+    <div class="menu" id="menu-modal">
+      <h1 class="menu-header">
+        <a href="/">أذكار</a>
+      </h1>
+      <div class="menu-content">
+        <ul class="nav-items">
+          <li data-translate-align="menuAthkar">
+            <a href="/athkar" data-translate="menuAthkar">Athkar</a>
+          </li>
+          <li data-translate-align="menuHadith">
+            <a href="/hadith" data-translate="menuHadith">Hadith</a>
+          </li>
+          <li data-translate-align="menuAbout" class="current">
+            <a href="/about" data-translate="menuAbout">About</a>
+          </li>
+          <li id="menu-settings" data-translate-align="menuSettings">
+            <a data-translate="menuSettings">Settings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal settings" id="settings-modal">
+      <div class="close" id="modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h1 data-translate="modalHeader">Settings</h1>
+      <h3 data-translate="modalLang" data-translate-align="modalLang">
+        Language
+      </h3>
+      <switcher-ui id="lang-switcher">
+        <li data-option="lang-english" data-translate="modalLangEnglish">
+          English
+        </li>
+        <li data-option="lang-arabic" data-translate="modalLangArabic">
+          Arabic
+        </li>
+      </switcher-ui>
+    </div>
   </body>
 </html>
