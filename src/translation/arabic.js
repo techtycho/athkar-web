@@ -10,6 +10,7 @@ export const translation = {
   menuAthkar: "الأذكار",
   menuHadith: "حديث",
   menuAbout: "عن البرنامج",
+  menuSettings: "الإعدادات",
 };
 
 export const alignment = "right";

@@ -10,6 +10,7 @@ export const translation = {
   menuAthkar: "Athkar",
   menuHadith: "Hadith",
   menuAbout: "About",
+  menuSettings: "Settings",
 };
 
 export const alignment = "left";

@@ -19,7 +19,7 @@ createModal(menuModal, (modal) => {
   });
 
   modal.setHideOperation((e) => {
-    e.style.right = "-65%";
+    e.style.right = `-${e.clientWidth}px`;
   });
 
   modal.setClass("menu");
@@ -52,7 +52,9 @@ createModal(settingsModal, (modal) => {
   modal.setShowOperation((e) => {
     if (document.body.clientWidth <= 600) {
       e.style.top = "9%";
+      e.style.transform = null;
     } else {
+      e.style.top = null;
       e.style.transform = "scale(1)";
     }
   });
@@ -60,7 +62,9 @@ createModal(settingsModal, (modal) => {
   modal.setHideOperation((e) => {
     if (document.body.clientWidth <= 600) {
       e.style.top = "-91%";
+      e.style.transform = null;
     } else {
+      e.style.top = null;
       e.style.transform = "scale(0)";
     }
   });

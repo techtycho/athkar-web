@@ -3,6 +3,7 @@ export const alignable = {
   menuAthkar: "[data-translate-align=menuAthkar]",
   menuHadith: "[data-translate-align=menuHadith]",
   menuAbout: "[data-translate-align=menuAbout]",
+  menuSettings: "[data-translate-align=menuSettings]",
 };
 
 export const alignableList = [
@@ -10,4 +11,5 @@ export const alignableList = [
   alignable.menuAthkar,
   alignable.menuHadith,
   alignable.menuAbout,
+  alignable.menuSettings,
 ];

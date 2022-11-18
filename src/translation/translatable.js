@@ -10,6 +10,7 @@ export const translatable = {
   menuAthkar: "[data-translate=menuAthkar]",
   menuHadith: "[data-translate=menuHadith]",
   menuAbout: "[data-translate=menuAbout]",
+  menuSettings: "[data-translate=menuSettings]",
 };
 
 export const translatableList = [
@@ -24,4 +25,5 @@ export const translatableList = [
   translatable.menuAthkar,
   translatable.menuHadith,
   translatable.menuAbout,
+  translatable.menuSettings,
 ];
