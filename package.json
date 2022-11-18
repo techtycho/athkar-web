@@ -1,16 +1,18 @@
 {
   "name": "advice-app",
   "version": "1.0.0",
-  "description": "Advice Application",
+  "description": "Athkar Web",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
+    "build": "webpack --no-watch",
+    "dev": "webpack",
+    "serve": "webpack serve",
     "live-server": "live-server . --port=5500",
     "sass": "sass src/styles/main.scss dist/css/main.css --no-source-map -s compressed"
   },
   "keywords": [
-    "advice",
+    "atkar",
+    "islam",
     "app"
   ],
   "author": "Omar Ahmed",
