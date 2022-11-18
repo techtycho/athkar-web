@@ -2,8 +2,5 @@
 node_modules/
 dist/
 
-# NPM
-package-lock.json
-
 # Personal
 TODO.md
