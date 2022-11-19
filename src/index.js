@@ -14,6 +14,4 @@ loopBackground(main, 5000);
 
 onClick(button, () => openURL("/about"));
 
-if (navigator.userAgent.match(/Android/i)) {
-  window.scrollTo(0, 1);
-}
+window.scrollTo(0, 1);
