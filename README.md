@@ -86,4 +86,4 @@ AthkarWeb uses [Hisn-al-Muslim](https://play.google.com/store/apps/details?id=co
 
 ## Support
 
-Support the project by reporting bugs and pushing code. You can even report for typos in the documentation, or bugs in the code. Feedback is also appreciated.
+Support the project by reporting bugs and pushing code. You can even fix typos in the documentation, or bugs in the code. Feedback is also appreciated.
