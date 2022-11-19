@@ -17,3 +17,9 @@
 </p>
 
 <h1 align="center">Athkar Web</h1>
+
+Athkar Web is a web application that provides daily Athkar for Muslims.
+
+## Visit Our Website
+
+Click on the badge
