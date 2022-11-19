@@ -34,7 +34,7 @@
 
 ## Visit Our Website
 
-The website is deployed with Vercel, go to [our website](https://athkarweb.vercel.com) (`https://athkarweb.vercel.com`).
+The website is deployed with Vercel, go to [our website](https://athkarweb.vercel.app) (`https://athkarweb.vercel.app`).
 
 ### Install Locally
 
