@@ -11,12 +11,9 @@
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-brightgreen" />
   <img src="https://img.shields.io/badge/Phase-Pre--alpha-orange" />
   <img src="https://img.shields.io/badge/Deployment-Vercel-informational" />
-</p>
-
-<p align="center">
   <a href="https://athkarweb.vercel.app">
     <img src="https://img.shields.io/badge/Website-Link-success" />
   </a>
 </p>
 
-# Athkar Web
+<h1 align="center">Athkar Web</h1>
