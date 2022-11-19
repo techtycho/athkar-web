@@ -82,7 +82,7 @@ AthkarWeb uses a bunch of technologies to deliver its unique user experience.
 
 ### Other Information
 
-AthkarWeb uses Hisn-al-Muslim's REST API for Athkar.
+AthkarWeb uses [Hisn-al-Muslim](https://play.google.com/store/apps/details?id=com.hisn.almuslim&hl=en_US&gl=US)'s [REST API](http://hisnmuslim.com/api/husn.json) for Athkar.
 
 ## Support
 
