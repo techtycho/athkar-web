@@ -121,3 +121,20 @@
     }
   }
 }
+
+@media (max-width: 340px) {
+  .about .wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  main .panel .title {
+    h1 {
+      font-size: 3rem !important;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
