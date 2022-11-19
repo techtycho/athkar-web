@@ -18,8 +18,72 @@
 
 <h1 align="center">Athkar Web</h1>
 
-Athkar Web is a web application that provides daily Athkar for Muslims.
+<p align="center">
+  Athkar Web is a web application that provides daily Athkar for Muslims.
+<p>
+
+## Table of Contents
+
+- [Visit Our Website](#visit-our-website)
+  - [Install Locally](#install-locally)
+  - [Other NPM Scripts](#other-npm-scripts)
+- [Technical Information](#technical-information)
+  - [Technologies Used](#technologies-used)
+  - [Other Information](#other-information)
+- [Support](#support)
 
 ## Visit Our Website
 
-Click on the badge
+The website is deployed with Vercel, go to [our website](https://athkarweb.vercel.com) (`https://athkarweb.vercel.com`).
+
+### Install Locally
+
+First, clone the repository:
+
+```sh
+$ git clone https://github.com/techtycho/athkar-web
+```
+
+We do not rely on any dependencies, although we use some **dev dependencies**, which you don't need to install. Although you can install them, if you want:
+
+```sh
+$ npm install
+```
+
+Then, build the application with:
+
+```sh
+$ npm run build
+```
+
+### Other NPM Scripts
+
+See [package.json](package.json), for more info on the commands.
+
+| Name          | Description                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| `build`       | Build the application once                                                                  |
+| `dev`         | Build the application everytime a file is changed, hot-reload, `watch` option is enabled.   |
+| `serve`       | Serves the application, `webpack-dev-server` package must be installed. I don't use it much |
+| `live-server` | Serves the HTML document with `live-server`, `live-server` must be installed.               |
+| `sass`        | Compiles SCSS files to plain CSS files, unnecessary since Webpack handles all of that.      |
+
+## Technical Information
+
+AthkarWeb uses a bunch of technologies to deliver its unique user experience.
+
+### Technologies Used
+
+| Name    | Description                                                                                                                                                                                                      |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sass    | We use `.scss` files instead of plain `.css` files, so we use Sass, which adds more features to plain CSS.                                                                                                       |
+| Webpack | Webpack is a web bundler, we use it to create a unique developer-friendly environment. It compiles `.js` files to a single `.js` file for every page, and we can use other technologies like Babel on top of it. |
+| Babel   | Babel compiles modern Javascript to Javascript code that is comptible with older browsers.                                                                                                                       |
+
+### Other Information
+
+AthkarWeb uses Hisn-al-Muslim's REST API for Athkar.
+
+## Support
+
+Support the project by reporting bugs and pushing code. You can even report for typos in the documentation, or bugs in the code. Feedback is also appreciated.
