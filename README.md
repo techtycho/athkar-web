@@ -60,13 +60,13 @@ $ npm run build
 
 See [package.json](package.json), for more info on the commands.
 
-| Name          | Description                                                                                 |
-| ------------- | ------------------------------------------------------------------------------------------- |
-| `build`       | Build the application once                                                                  |
-| `dev`         | Build the application everytime a file is changed, hot-reload, `watch` option is enabled.   |
-| `serve`       | Serves the application, `webpack-dev-server` package must be installed. I don't use it much |
-| `live-server` | Serves the HTML document with `live-server`, `live-server` must be installed.               |
-| `sass`        | Compiles SCSS files to plain CSS files, unnecessary since Webpack handles all of that.      |
+| Name          | Description                                                                                    |
+| ------------- | ---------------------------------------------------------------------------------------------- |
+| `build`       | Build the application once.                                                                    |
+| `dev`         | Build the application everytime a file is changed, hot-reload, `watch` option is enabled.      |
+| `serve`       | Serves the application, `webpack-dev-server` package must be installed. I don't really use it. |
+| `live-server` | Serves the HTML document with `live-server`, `live-server` must be installed.                  |
+| `sass`        | Compiles SCSS files to plain CSS files, unnecessary since Webpack handles all of that.         |
 
 ## Technical Information
 
