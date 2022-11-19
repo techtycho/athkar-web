@@ -3,7 +3,7 @@
     width="200"
     height="200"
     src="assets/branding/athkarweb/logo.png"
-  >
+  />
 </p>
 
 <p align="center">
