@@ -13,5 +13,3 @@ activateLanguage();
 loopBackground(main, 5000);
 
 onClick(button, () => openURL("/about"));
-
-window.scrollTo(0, 1);
