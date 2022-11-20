@@ -3,8 +3,12 @@
   cursor: pointer;
   text-decoration: none;
   font-style: italic;
+  display: inline-block;
+  border-bottom: 1px solid #3466b800;
+  transition: color 0.2s, border-color 0.2s;
 
   &:hover {
     color: lighten(#3466b8, 20);
+    border-color: lighten(#3466b8, 20);
   }
 }
