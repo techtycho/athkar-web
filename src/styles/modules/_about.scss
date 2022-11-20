@@ -13,6 +13,11 @@ body {
       sans-serif;
     font-weight: 500;
     opacity: 0.8;
+
+    &.license {
+      opacity: 0.6;
+      margin-bottom: 5px;
+    }
   }
 
   .wrapper {
