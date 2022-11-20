@@ -1,0 +1,10 @@
+.link {
+  color: #3466b8;
+  cursor: pointer;
+  text-decoration: none;
+  font-style: italic;
+
+  &:hover {
+    color: lighten(#3466b8, 20);
+  }
+}
