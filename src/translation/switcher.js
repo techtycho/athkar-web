@@ -37,13 +37,15 @@ export function getCurrentLanguageIndex() {
 
 export function changeLanguage(language) {
   translatableList.forEach((translatable) => {
-    const element = document.querySelector(translatable);
+    const element = document.querySelector(`[data-translate=${translatable}]`);
     if (element)
       element.textContent = language.translation[element.dataset.translate];
   });
 
   alignableList.forEach((alignable) => {
-    const element = document.querySelector(alignable);
+    const element = document.querySelector(
+      `[data-translate-align=${alignable}]`
+    );
     if (element) element.style.textAlign = language.alignment;
   });
 

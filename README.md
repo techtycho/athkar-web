@@ -70,7 +70,7 @@ See [package.json](package.json), for more info on the commands.
 
 ## Technical Information
 
-AthkarWeb uses a bunch of technologies to deliver its unique user experience.
+Athkar Web uses a bunch of technologies to deliver its unique user experience.
 
 ### Technologies Used
 
@@ -82,7 +82,7 @@ AthkarWeb uses a bunch of technologies to deliver its unique user experience.
 
 ### Other Information
 
-AthkarWeb uses [Hisn-al-Muslim](https://play.google.com/store/apps/details?id=com.hisn.almuslim&hl=en_US&gl=US)'s [REST API](http://hisnmuslim.com/api/husn.json) for Athkar.
+Athkar Web uses [Hisn-al-Muslim](https://play.google.com/store/apps/details?id=com.hisn.almuslim&hl=en_US&gl=US)'s [REST API](http://hisnmuslim.com/api/husn.json) for Athkar.
 
 ## Support
 

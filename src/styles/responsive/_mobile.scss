@@ -7,6 +7,20 @@
       padding-bottom: 30px;
     }
   }
+
+  .about {
+    padding: 30px;
+
+    .title {
+      h1 {
+        font-size: 5rem !important;
+      }
+    }
+
+    .subtitle {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -24,12 +38,6 @@
   .modal {
     left: 15%;
     width: 70%;
-  }
-}
-
-@media (max-width: 600px) {
-  main .panel .btn {
-    width: 100%;
   }
 
   .about {
@@ -70,6 +78,12 @@
 
       margin: 20px 50px;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  main .panel .btn {
+    width: 100%;
   }
 
   .menu {

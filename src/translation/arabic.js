@@ -11,6 +11,10 @@ export const translation = {
   menuHadith: "حديث",
   menuAbout: "عن البرنامج",
   menuSettings: "الإعدادات",
+  aboutGeneralHeader: "عام",
+  aboutGeneralPara: `هذا المشروع مشروع صدقة جارية تم تطويره من قبل عمر أحمد`,
+  aboutTechHeader: "معلومات تقنية",
+  aboutTechPara: `جميع الأذكار مأخوذة من حصن المسلم API`,
 };
 
 export const alignment = "right";

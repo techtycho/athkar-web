@@ -11,6 +11,11 @@ export const translation = {
   menuHadith: "Hadith",
   menuAbout: "About",
   menuSettings: "Settings",
+  aboutGeneralHeader: "General Information",
+  aboutGeneralPara: `This project is a Sadaqa Jariya, developed and maintained by Omar
+Ahmed (techtycho).`,
+  aboutTechHeader: "Technical Information",
+  aboutTechPara: `Athkar Web uses Hisn-al-Muslim's API for the Athkar.`,
 };
 
 export const alignment = "left";

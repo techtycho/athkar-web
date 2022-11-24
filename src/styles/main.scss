@@ -7,12 +7,14 @@
 @import "utils/flexbox";
 @import "utils/button";
 @import "utils/link";
+@import "utils/switcher";
 @import "utils/modal";
+
 @import "utils/menu";
 @import "utils/settings";
-@import "utils/switcher";
 
 @import "responsive/mobile";
+@import "responsive/tv";
 
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap");
 
