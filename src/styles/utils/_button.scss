@@ -21,4 +21,12 @@
   &:focus {
     box-shadow: 0 0 30px 10px #0005;
   }
+
+  &.sm {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 }

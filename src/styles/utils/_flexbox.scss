@@ -1,3 +1,12 @@
 .spacer {
   flex: 1;
 }
+
+.center {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,7 +1,3 @@
-body {
-  background-color: #000;
-}
-
 .about {
   width: 100%;
   color: #fff;
@@ -27,7 +23,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 
-    div {
+    .sect {
       background-color: darken($accent, 10);
       padding: 10px;
       border-radius: 5px;

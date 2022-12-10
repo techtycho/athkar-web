@@ -14,7 +14,7 @@ export const translation = {
   aboutGeneralHeader: "عام",
   aboutGeneralPara: `هذا المشروع مشروع صدقة جارية تم تطويره من قبل عمر أحمد`,
   aboutTechHeader: "معلومات تقنية",
-  aboutTechPara: `جميع الأذكار مأخوذة من حصن المسلم API`,
+  aboutTechPara: `لدينا API خاص`,
 };
 
 export const alignment = "right";

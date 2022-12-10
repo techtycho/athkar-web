@@ -15,7 +15,7 @@ export const translation = {
   aboutGeneralPara: `This project is a Sadaqa Jariya, developed and maintained by Omar
 Ahmed (techtycho).`,
   aboutTechHeader: "Technical Information",
-  aboutTechPara: `Athkar Web uses Hisn-al-Muslim's API for the Athkar.`,
+  aboutTechPara: `Athkar Web has its own API for Athkar.`,
 };
 
 export const alignment = "left";
