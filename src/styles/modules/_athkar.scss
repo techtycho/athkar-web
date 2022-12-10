@@ -1,0 +1,13 @@
+main.athkar {
+  background: url("/assets/flowers.jpg") no-repeat center center/cover;
+}
+
+.athkar {
+  &.panel {
+    background-color: #000e;
+    color: #fff;
+    overflow: hidden;
+    width: 50%;
+    box-shadow: 50px 0 100px 70px #000e;
+  }
+}
