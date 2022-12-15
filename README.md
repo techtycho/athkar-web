@@ -30,6 +30,9 @@
 - [Technical Information](#technical-information)
   - [Technologies Used](#technologies-used)
   - [Other Information](#other-information)
+- [API](#api)
+  - [Links](#links)
+  - [More Info](#more-info)
 - [Support](#support)
 
 ## Visit Our Website
@@ -82,7 +85,26 @@ Athkar Web uses a bunch of technologies to deliver its unique user experience.
 
 ### Other Information
 
-Athkar Web uses [Hisn-al-Muslim](https://play.google.com/store/apps/details?id=com.hisn.almuslim&hl=en_US&gl=US)'s [REST API](http://hisnmuslim.com/api/husn.json) for Athkar.
+Athkar Web has its own API for Athkar. See [API](#api) section.
+
+## API
+
+Athkar Web has its own API for Athkar, developers may find that useful in
+building their own applications. The API is free to use for everyone.
+
+### Links
+
+[/api](https://athkarweb.vercel.app/api) is the link for the API.
+`/api` is just a directory in the project structures, that contains
+banching directories and JSON files.
+
+`/api` is an HTML page, it contains links to the Athkar.
+
+### More Info
+
+Documentation for the API is found in the Wiki.
+
+#### Wiki under construction!
 
 ## Support
 
