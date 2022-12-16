@@ -1,7 +1,10 @@
-import { queryId } from "./dom/dom";
+import { query, queryId, createElement } from "./dom/dom";
 import { urlFetch } from "./http/fetch";
 
 import { athkarRoutes } from "./routes";
+
+const panel = query(".panel");
+const main = queryId("main");
 
 const searchParams = new URLSearchParams(document.location.search);
 const thikrParam = searchParams.get("t");

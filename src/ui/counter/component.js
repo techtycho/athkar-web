@@ -1,4 +1,4 @@
-import { onClick } from "../../dom/event";
+import { onClick } from "../../dom/dom";
 
 class CounterUI extends HTMLElement {
   static defaultClass = "counter";
@@ -7,9 +7,10 @@ class CounterUI extends HTMLElement {
   index = 0;
 
   // Callback Hooks
-  finishCallbackDone = false; // Ensures that finish callback runs only once
-  callback = () => {};
-  finishCallback = () => {};
+  finish = false; // Ensures that finish hook runs only once
+
+  updateHook = () => {};
+  finishHook = () => {};
 
   constructor() {
     super();
@@ -30,13 +31,13 @@ class CounterUI extends HTMLElement {
     this.updateValue();
   }
 
-  setCallback(callback = () => {}) {
+  setUpdateHook(callback = () => {}) {
     this.callback = callback;
   }
 
-  setFinishCallback(callback = () => {}) {
-    this.finishCallback = callback;
-    this.finishCallbackDone = false;
+  setFinishHook(callback = () => {}) {
+    this.finishHook = callback;
+    this.finish = false;
   }
 
   setNumber(n) {
@@ -60,12 +61,12 @@ class CounterUI extends HTMLElement {
       else {
         if (this.numberArray[this.index + 1]) {
           this.setNumber(this.numberArray[++this.index]);
-          this.callback();
+          this.updateHook();
         } else {
           // Ensure that finish callback runs only once
-          if (!this.finishCallbackDone) {
-            this.finishCallback();
-            this.finishCallbackDone = true;
+          if (!this.finish) {
+            this.finishHook();
+            this.finish = true;
           }
         }
       }

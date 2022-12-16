@@ -13,5 +13,32 @@ main.athkar {
 }
 
 .counter {
-  // TODO: Style counter
+  position: absolute;
+  background-color: $accent;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  top: calc((90px - 75px) / 2);
+  left: calc((90px - 75px) / 2);
+  padding: 10px;
+  border: 0.2px solid #fff;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+.counter-progress {
+  position: absolute;
+  background: conic-gradient($accent 45deg, lighten($accent, 75) 0deg);
+  width: 90px;
+  height: 90px;
+  top: 50%;
+  left: 45%;
+  border-radius: 50%;
+  z-index: 1;
 }
