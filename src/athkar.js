@@ -1,12 +1,15 @@
 import { loopBackground } from "./background/loop";
 import { activateLanguage } from "./translation/switcher";
-import { queryId, query, createElement } from "./dom/dom";
+import { queryId } from "./dom/dom";
 
 import "./styles/main.scss";
+import "./ui/counter/component";
 import "./ui/switcher/component";
+
+import "./athkarView";
 import "./modals";
-import { onClick } from "./dom/event";
 
 const main = queryId("main");
+
 activateLanguage();
 loopBackground(main, 5000);

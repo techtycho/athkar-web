@@ -1,55 +1,23 @@
-const panel = query(".panel");
+import { queryId } from "./dom/dom";
+import { urlFetch } from "./http/fetch";
 
-const athkarBox = createElement("div", {
-  className: "thikr",
-  textContent: "...",
-  append: panel,
-});
+import { athkarRoutes } from "./routes";
 
-const counter = createElement("div", {
-  className: "thikr-counter",
-  textContent: "0",
-  append: panel,
-});
+const searchParams = new URLSearchParams(document.location.search);
+const thikrParam = searchParams.get("t");
+let url = "";
 
-function render(index, dataObject) {
-  const data = dataObject[index];
-  athkarBox.style.display = "block";
-
-  arr.forEach((a) => {
-    a.remove();
-  });
-
-  if (d.isArray) {
-    athkarBox.style.display = "none";
-    d.body.forEach((b, j) => {
-      arr.push(
-        createElement("div", {
-          className: "thikr",
-          textContent: b,
-          append: panel,
-          before: counter,
-        })
-      );
-    });
-  } else athkarBox.textContent = d.body;
-
-  counter.textContent = d.repeat;
-  j = data[index].repeat;
+for (const route in athkarRoutes) {
+  if (thikrParam === route) {
+    url = athkarRoutes[route];
+  }
 }
 
-fetch("/api/athkar/morning.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const arr = [];
-
-    let i = 0;
-    let j = data[i].repeat;
-    render(i, data);
-
-    onClick(counter, () => {
-      if (j !== 1) {
-        counter.textContent = --j;
-      } else render(++i, data);
-    });
+if (url) {
+  urlFetch(url).then((data) => {
+    const dataRepeat = data.map((d) => d.repeat);
+    counter.setNumberArray(dataRepeat);
   });
+}
+
+const counter = queryId("counter");

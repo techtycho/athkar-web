@@ -6,8 +6,6 @@ import "./styles/main.scss";
 import "./ui/switcher/component";
 import "./modals";
 
-import "./athkarView";
-
 const button = queryId("btn");
 const main = queryId("main");
 
