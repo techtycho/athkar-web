@@ -4,7 +4,10 @@ class CounterUI extends HTMLElement {
   static defaultClass = "counter";
   numberArray = [];
   number = 0;
+  maxNumber = 0;
   index = 0;
+
+  progressComponent = null;
 
   // Callback Hooks
   finish = false; // Ensures that finish hook runs only once
@@ -24,10 +27,20 @@ class CounterUI extends HTMLElement {
     this.textContent = this.number;
   }
 
+  setProgressComponent(e) {
+    this.progressComponent = e;
+    this.setProgress(0);
+  }
+
+  setProgress(deg) {
+    this.progressComponent.style.background = `conic-gradient(#772e20 ${deg}deg, white 0deg)`;
+  }
+
   setNumberArray(arr) {
     this.numberArray = arr;
     this.index = 0;
-    this.number = this.numberArray[this.index];
+    this.maxNumber = this.numberArray[this.index];
+    this.setNumber(this.numberArray[this.index]);
     this.updateValue();
   }
 
@@ -42,6 +55,7 @@ class CounterUI extends HTMLElement {
 
   setNumber(n) {
     this.number = n;
+    this.maxNumber = n;
     this.updateValue();
   }
 
@@ -57,17 +71,20 @@ class CounterUI extends HTMLElement {
 
   addEventListeners() {
     onClick(this, () => {
-      if (this.number > 1) this.decNumber();
-      else {
-        if (this.numberArray[this.index + 1]) {
-          this.setNumber(this.numberArray[++this.index]);
-          this.updateHook();
-        } else {
-          // Ensure that finish callback runs only once
-          if (!this.finish) {
-            this.finishHook();
-            this.finish = true;
-          }
+      if (this.number > 1) {
+        this.decNumber();
+        this.setProgress(
+          (100 / this.maxNumber) * (this.maxNumber - this.number) * 3.6
+        );
+      } else {
+        this.setProgress(360);
+        this.textContent = ".";
+        this.style.paddingTop = "0";
+
+        // Ensure that finish callback runs only once
+        if (!this.finish) {
+          this.finishHook();
+          this.finish = true;
         }
       }
     });
