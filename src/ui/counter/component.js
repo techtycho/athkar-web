@@ -2,11 +2,8 @@ import { onClick } from "../../dom/dom";
 
 class CounterUI extends HTMLElement {
   static defaultClass = "counter";
-  numberArray = [];
   number = 0;
   maxNumber = 0;
-  index = 0;
-
   progressComponent = null;
 
   // Callback Hooks
@@ -33,15 +30,7 @@ class CounterUI extends HTMLElement {
   }
 
   setProgress(deg) {
-    this.progressComponent.style.background = `conic-gradient(#772e20 ${deg}deg, white 0deg)`;
-  }
-
-  setNumberArray(arr) {
-    this.numberArray = arr;
-    this.index = 0;
-    this.maxNumber = this.numberArray[this.index];
-    this.setNumber(this.numberArray[this.index]);
-    this.updateValue();
+    this.progressComponent.style.background = `conic-gradient(#772e20 ${deg}deg, #986 0deg)`;
   }
 
   setUpdateHook(callback = () => {}) {
