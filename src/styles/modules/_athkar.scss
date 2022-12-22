@@ -68,9 +68,14 @@ main.athkar {
 }
 
 .athkar-view {
+  margin-bottom: 50%;
   display: flex;
   position: relative;
   align-items: center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   .beacon {
     position: absolute;

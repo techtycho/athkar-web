@@ -6,12 +6,15 @@ class AthkarUI extends HTMLElement {
   body = null;
   beacon = null;
 
+  finishHook = () => {};
+
   constructor() {
     super();
+  }
 
+  connectedCallback() {
     this.className = AthkarUI.defaultClass;
     this.renderHTML();
-    this.addKeyEvents();
   }
 
   renderHTML() {
@@ -28,12 +31,9 @@ class AthkarUI extends HTMLElement {
     this.beacon = this.children[2];
   }
 
-  addKeyEvents() {
-    document.addEventListener("keypress", (e) => {
-      if (e.code === "Enter" || e.code === "Space") {
-        this.counter.children[0].click();
-      }
-    });
+  setFinishHook(callback) {
+    this.finishHook = callback;
+    this.counter.children[0].setFinishHook(() => this.finishHook());
   }
 
   setProgress() {
