@@ -14,6 +14,7 @@ class AthkarUI extends HTMLElement {
         <counter-ui class="counter"></counter-ui>
       </div>
       <p class="athkar-body"></p>
+      <div class="beacon"></div>
     `;
   }
 
