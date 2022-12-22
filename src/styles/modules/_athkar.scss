@@ -61,5 +61,8 @@ main.athkar {
     font-family: "Amiri", serif;
     font-size: 2rem;
     max-width: 80%;
+    max-height: 60%;
+    overflow: scroll;
+    overflow-x: hidden;
   }
 }

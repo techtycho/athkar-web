@@ -17,8 +17,7 @@ const counter = query(".counter");
 
 if (url) {
   urlFetch(url).then((data) => {
-    athkar.setBodyText(data[9].body);
-    athkar.setRepeatCount(data[9].repeat);
+    athkar.setData(data[2]);
     athkar.setProgress();
 
     document.addEventListener("keypress", (e) => {

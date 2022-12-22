@@ -21,12 +21,15 @@ class AthkarUI extends HTMLElement {
     this.children[0].children[0].setProgressComponent(this.children[0]);
   }
 
-  setRepeatCount(n) {
-    this.children[0].children[0].setNumber(n);
-  }
+  setData(data) {
+    this.children[0].children[0].setNumber(data.repeat);
 
-  setBodyText(t) {
-    this.children[1].textContent = t;
+    if (data.isArray) {
+      data.body.forEach((body) => {
+        this.children[1].innerHTML += body;
+        this.children[1].innerHTML += "<br /><br />";
+      });
+    } else this.children[1].textContent = data.body;
   }
 }
 
