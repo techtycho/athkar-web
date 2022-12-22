@@ -1,11 +1,17 @@
+import { checkOverflow } from "../../utils";
+
 class AthkarUI extends HTMLElement {
   static defaultClass = "athkar-view";
+  counter = null;
+  body = null;
+  beacon = null;
 
   constructor() {
     super();
 
     this.className = AthkarUI.defaultClass;
     this.renderHTML();
+    this.addKeyEvents();
   }
 
   renderHTML() {
@@ -16,21 +22,38 @@ class AthkarUI extends HTMLElement {
       <p class="athkar-body"></p>
       <div class="beacon"></div>
     `;
+
+    this.counter = this.children[0];
+    this.body = this.children[1];
+    this.beacon = this.children[2];
+  }
+
+  addKeyEvents() {
+    document.addEventListener("keypress", (e) => {
+      if (e.code === "Enter" || e.code === "Space") {
+        this.counter.children[0].click();
+      }
+    });
   }
 
   setProgress() {
-    this.children[0].children[0].setProgressComponent(this.children[0]);
+    this.counter.children[0].setProgressComponent(this.counter);
   }
 
   setData(data) {
-    this.children[0].children[0].setNumber(data.repeat);
+    this.setProgress();
+    this.counter.children[0].setNumber(data.repeat);
 
     if (data.isArray) {
       data.body.forEach((body) => {
-        this.children[1].innerHTML += body;
-        this.children[1].innerHTML += "<br /><br />";
+        this.body.innerHTML += body;
+        this.body.innerHTML += "<br /><br />";
       });
-    } else this.children[1].textContent = data.body;
+    } else this.body.textContent = data.body;
+
+    if (checkOverflow(this.body)) {
+      this.beacon.style.borderBottomWidth = "1px";
+    } else this.beacon.style.borderBottomWidth = "0";
   }
 }
 
