@@ -78,6 +78,7 @@ main.athkar {
     left: 40%;
     width: 200px;
     border-bottom: 1px solid #fff2;
+    border-bottom-width: 0;
     animation: beacon infinite 1s;
 
     @keyframes beacon {
